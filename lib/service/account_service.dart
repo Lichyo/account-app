@@ -9,6 +9,26 @@ class AccountService {
     return sortedAccount;
   }
 
+  int getMonthlyIncome() {
+    int monthlyIncome = 0;
+    accounts.forEach((account) {
+      if (account.isIncome == true) {
+        monthlyIncome = monthlyIncome + account.amount;
+      }
+    });
+    return monthlyIncome;
+  }
+
+  int getMonthlyExpense() {
+    int monthlyExpense = 0;
+    accounts.forEach((account) {
+      if (account.isIncome == false) {
+        monthlyExpense = monthlyExpense + account.amount;
+      }
+    });
+    return monthlyExpense;
+  }
+
   addAccount(Account newAccount) {
     accounts.add(newAccount);
   }
