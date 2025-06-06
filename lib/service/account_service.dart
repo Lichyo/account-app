@@ -1,8 +1,8 @@
-import 'package:account_app/account_model.dart';
+import 'package:account_app/model/account_model.dart';
 
 class AccountService {
   List<Account> accounts = [];
-  List<Account> getSortedAccount() {
+  Future<List<dynamic>> getSortedAccount() async {
     List<Account> sortedAccount = accounts;
     sortedAccount.sort((a, b) => b.date.compareTo(a.date));
 
