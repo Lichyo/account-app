@@ -1,4 +1,4 @@
-import 'package:account_app/account_model.dart';
+import 'package:account_app/model/account_model.dart';
 
 class AccountService {
   List<Account> accounts = [];
