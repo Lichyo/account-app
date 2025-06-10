@@ -1,3 +1,4 @@
+
 class Account {
   String title;
   DateTime date;
@@ -11,3 +12,4 @@ class Account {
     required this.isIncome,
   });
 }
+
